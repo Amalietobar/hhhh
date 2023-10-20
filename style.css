@@ -1,0 +1,145 @@
+
+/* Basic CSS Reset */
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+.page__body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+/* På mobile enheder */
+.navigation__container{
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+}
+.mobileiconlabel{
+    display: inline-block;
+    color: #0f399d;
+    background: rgb(255, 255, 255);
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+.menuitem{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: rgb(0, 64, 255);
+    text-decoration: none;
+    text-align: center;
+}
+/* Skjule textbox og menuitems indtil der klikkes */
+.menuitems__container, 
+.mobileicon{
+    display: none;
+}
+/*Vis menuitems når mobileicon-label er klikket*/
+.navigation__container input:checked ~ .menuitems__container{
+    display: block;
+}
+.companylogo{
+    position: absolute;
+    color: white;
+    top: 12px;
+    right: 10px;
+    width: 140px;
+}
+/* Regler Wide screen*/
+@media screen and (min-width: 800px){
+    .mobileiconlabel,
+    .mobileicon{
+        display: none;
+    }
+    .menuitem{
+        width: 130px;
+    }
+    .menuitem:hover{
+        background: #f5f2f2;
+    }
+    .companylogo{
+        left: 10px;
+    }
+    .menuitems__container{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+
+body {
+    font-family: Bebas, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #ffffff;
+    color: #0f399d;
+    text-align: center;
+    padding: 20px;
+    
+  }
+  img{  
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  .project {
+    border: 1px solid #ffffff;
+    padding: 10px;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #afc2df;
+    padding: 10px;
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+  }
+
+  .tekstommig {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.design-portfolio {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.caption {
+    text-align: center;
+    font-style: italic;
+    color: #000000;
+}
